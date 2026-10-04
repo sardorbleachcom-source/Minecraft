@@ -1,0 +1,878 @@
+[
+ {
+  "cat": "gamemode",
+  "cmd": "/gamemode survival",
+  "st": "ok",
+  "key": "c001"
+ },
+ {
+  "cat": "gamemode",
+  "cmd": "/gamemode creative",
+  "st": "ok",
+  "key": "c002"
+ },
+ {
+  "cat": "gamemode",
+  "cmd": "/gamemode adventure",
+  "st": "ok",
+  "key": "c003"
+ },
+ {
+  "cat": "gamemode",
+  "cmd": "/gamemode creative @a",
+  "st": "ok",
+  "key": "c004"
+ },
+ {
+  "cat": "gamemode",
+  "cmd": "/gamemode spectator",
+  "st": "ver",
+  "key": "c005"
+ },
+ {
+  "cat": "gamemode",
+  "cmd": "/defaultgamemode survival",
+  "st": "ok",
+  "key": "c006"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time set day",
+  "st": "ok",
+  "key": "c007"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time set night",
+  "st": "ok",
+  "key": "c008"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time set noon",
+  "st": "ok",
+  "key": "c009"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time set midnight",
+  "st": "ok",
+  "key": "c010"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time add 1000",
+  "st": "ok",
+  "key": "c011"
+ },
+ {
+  "cat": "time",
+  "cmd": "/time query daytime",
+  "st": "ok",
+  "key": "c012"
+ },
+ {
+  "cat": "weather",
+  "cmd": "/weather clear",
+  "st": "ok",
+  "key": "c013"
+ },
+ {
+  "cat": "weather",
+  "cmd": "/weather rain",
+  "st": "ok",
+  "key": "c014"
+ },
+ {
+  "cat": "weather",
+  "cmd": "/weather thunder",
+  "st": "ok",
+  "key": "c015"
+ },
+ {
+  "cat": "weather",
+  "cmd": "/weather clear 1000000",
+  "st": "ok",
+  "key": "c016"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @s ~ ~10 ~",
+  "st": "ok",
+  "key": "c017"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @s 0 100 0",
+  "st": "ok",
+  "key": "c018"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @s Steve",
+  "st": "ok",
+  "key": "c019"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @a @s",
+  "st": "ok",
+  "key": "c020"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @e[type=cow] @s",
+  "st": "ok",
+  "key": "c021"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @s ^ ^ ^10",
+  "st": "ok",
+  "key": "c022"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/tp @s ~ ~ ~ facing 0 64 0",
+  "st": "ver",
+  "key": "c023"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/spawnpoint @s ~ ~ ~",
+  "st": "ok",
+  "key": "c024"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/setworldspawn ~ ~ ~",
+  "st": "ok",
+  "key": "c025"
+ },
+ {
+  "cat": "teleport",
+  "cmd": "/spreadplayers 0 0 10 100 @a",
+  "st": "ok",
+  "key": "c026"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s diamond 64",
+  "st": "ok",
+  "key": "c027"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s netherite_ingot 64",
+  "st": "ok",
+  "key": "c028"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s golden_apple 64",
+  "st": "ok",
+  "key": "c029"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s elytra",
+  "st": "ok",
+  "key": "c030"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s totem_of_undying",
+  "st": "ok",
+  "key": "c031"
+ },
+ {
+  "cat": "items",
+  "cmd": "/enchant @s sharpness 5",
+  "st": "ok",
+  "key": "c032"
+ },
+ {
+  "cat": "items",
+  "cmd": "/enchant @s efficiency 5",
+  "st": "ok",
+  "key": "c033"
+ },
+ {
+  "cat": "items",
+  "cmd": "/enchant @s mending 1",
+  "st": "ok",
+  "key": "c034"
+ },
+ {
+  "cat": "items",
+  "cmd": "/give @s debug_stick",
+  "st": "no",
+  "key": "c035"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s speed 999999 5 true",
+  "st": "ok",
+  "key": "c036"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s night_vision 999999 0 true",
+  "st": "ok",
+  "key": "c037"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s jump_boost 60 5",
+  "st": "ok",
+  "key": "c038"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s regeneration 30 3",
+  "st": "ok",
+  "key": "c039"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s resistance 999999 4 true",
+  "st": "ok",
+  "key": "c040"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s water_breathing 999999 0 true",
+  "st": "ok",
+  "key": "c041"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s invisibility 999999 0 true",
+  "st": "ok",
+  "key": "c042"
+ },
+ {
+  "cat": "effects",
+  "cmd": "/effect @s clear",
+  "st": "ok",
+  "key": "c043"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon cow ~ ~ ~",
+  "st": "ok",
+  "key": "c044"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon creeper ~ ~ ~",
+  "st": "ok",
+  "key": "c045"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon creeper ~ ~ ~ minecraft:become_charged",
+  "st": "ver",
+  "key": "c046"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon zombie ~ ~ ~",
+  "st": "ok",
+  "key": "c047"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon skeleton ~ ~ ~",
+  "st": "ok",
+  "key": "c048"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon horse ~ ~ ~",
+  "st": "ok",
+  "key": "c049"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon wither ~ ~ ~",
+  "st": "ok",
+  "key": "c050"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon ender_dragon ~ ~ ~",
+  "st": "ok",
+  "key": "c051"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon warden ~ ~ ~",
+  "st": "ver",
+  "key": "c052"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/summon armor_stand ~ ~ ~",
+  "st": "ok",
+  "key": "c053"
+ },
+ {
+  "cat": "mobs",
+  "cmd": "/give @s creeper_spawn_egg 16",
+  "st": "ok",
+  "key": "c054"
+ },
+ {
+  "cat": "lightning",
+  "cmd": "/summon lightning_bolt ~ ~ ~",
+  "st": "ok",
+  "key": "c055"
+ },
+ {
+  "cat": "lightning",
+  "cmd": "/summon lightning_bolt ~ ~ ~10",
+  "st": "ok",
+  "key": "c056"
+ },
+ {
+  "cat": "lightning",
+  "cmd": "/execute at @a run summon lightning_bolt ~ ~ ~",
+  "st": "ver",
+  "key": "c057"
+ },
+ {
+  "cat": "lightning",
+  "cmd": "/execute at @e[type=pig] run summon lightning_bolt ~ ~ ~",
+  "st": "ver",
+  "key": "c058"
+ },
+ {
+  "cat": "lightning",
+  "cmd": "/weather thunder",
+  "st": "ok",
+  "key": "c059"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/give @s tnt 64",
+  "st": "ok",
+  "key": "c060"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/summon tnt ~ ~ ~",
+  "st": "ok",
+  "key": "c061"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/setblock ~ ~ ~ tnt",
+  "st": "ok",
+  "key": "c062"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/summon tnt_minecart ~ ~ ~",
+  "st": "ok",
+  "key": "c063"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/fill ~ ~ ~ ~4 ~ ~4 tnt",
+  "st": "ok",
+  "key": "c064"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/gamerule tntexplodes false",
+  "st": "ok",
+  "key": "c065"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/gamerule tntexplodes true",
+  "st": "ok",
+  "key": "c066"
+ },
+ {
+  "cat": "tnt",
+  "cmd": "/give @s flint_and_steel",
+  "st": "ok",
+  "key": "c067"
+ },
+ {
+  "cat": "build",
+  "cmd": "/setblock ~ ~ ~ diamond_block",
+  "st": "ok",
+  "key": "c068"
+ },
+ {
+  "cat": "build",
+  "cmd": "/setblock ~ ~1 ~ chest",
+  "st": "ok",
+  "key": "c069"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~ ~ ~ ~10 ~ ~10 stone",
+  "st": "ok",
+  "key": "c070"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~ ~ ~ ~10 ~5 ~10 air",
+  "st": "ok",
+  "key": "c071"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~ ~ ~ ~10 ~5 ~10 glass hollow",
+  "st": "ok",
+  "key": "c072"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-5 ~ ~-5 ~5 ~4 ~5 stone_bricks hollow",
+  "st": "ok",
+  "key": "c073"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~ ~ ~ ~20 ~5 ~ stone_bricks",
+  "st": "ok",
+  "key": "c074"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~ ~-5 ~ ~10 ~-1 ~10 water",
+  "st": "ok",
+  "key": "c075"
+ },
+ {
+  "cat": "build",
+  "cmd": "/clone ~ ~ ~ ~5 ~5 ~5 ~10 ~ ~",
+  "st": "ok",
+  "key": "c076"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-60 ~-1 ~-60 ~60 ~-1 ~60 grass_block",
+  "st": "ver",
+  "key": "c077"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-25 ~ ~-25 ~25 ~10 ~25 air",
+  "st": "ok",
+  "key": "c078"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-50 ~-4 ~-50 ~50 ~-2 ~50 dirt",
+  "st": "ok",
+  "key": "c079"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-15 ~ ~-15 ~15 ~20 ~15 air replace oak_log",
+  "st": "ok",
+  "key": "c080"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-15 ~ ~-15 ~15 ~20 ~15 air replace oak_leaves",
+  "st": "ok",
+  "key": "c081"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-15 ~ ~-15 ~15 ~20 ~15 air replace birch_log",
+  "st": "ok",
+  "key": "c082"
+ },
+ {
+  "cat": "build",
+  "cmd": "/fill ~-15 ~ ~-15 ~15 ~20 ~15 air replace #minecraft:logs",
+  "st": "no",
+  "key": "c083"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/give @s bone_meal 64",
+  "st": "ok",
+  "key": "c084"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/give @s oak_sapling 16",
+  "st": "ok",
+  "key": "c085"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/fill ~-10 ~ ~-10 ~10 ~ ~10 air replace water",
+  "st": "ver",
+  "key": "c086"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/fill ~-10 ~ ~-10 ~10 ~ ~10 air replace lava",
+  "st": "ver",
+  "key": "c087"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/fill ~-10 ~-1 ~-10 ~10 ~-1 ~10 sand",
+  "st": "ok",
+  "key": "c088"
+ },
+ {
+  "cat": "nature",
+  "cmd": "/gamerule randomtickspeed 100",
+  "st": "ok",
+  "key": "c089"
+ },
+ {
+  "cat": "village",
+  "cmd": "/locate structure village",
+  "st": "ver",
+  "key": "c090"
+ },
+ {
+  "cat": "village",
+  "cmd": "/summon villager ~ ~ ~",
+  "st": "ok",
+  "key": "c091"
+ },
+ {
+  "cat": "village",
+  "cmd": "/summon iron_golem ~ ~ ~",
+  "st": "ok",
+  "key": "c092"
+ },
+ {
+  "cat": "village",
+  "cmd": "/summon wandering_trader ~ ~ ~",
+  "st": "ok",
+  "key": "c093"
+ },
+ {
+  "cat": "village",
+  "cmd": "/summon zombie_villager ~ ~ ~",
+  "st": "ok",
+  "key": "c094"
+ },
+ {
+  "cat": "village",
+  "cmd": "/summon pillager ~ ~ ~",
+  "st": "ok",
+  "key": "c095"
+ },
+ {
+  "cat": "village",
+  "cmd": "/effect @s bad_omen 999999 0",
+  "st": "ver",
+  "key": "c096"
+ },
+ {
+  "cat": "village",
+  "cmd": "/give @s emerald 64",
+  "st": "ok",
+  "key": "c097"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure mansion",
+  "st": "ok",
+  "key": "c098"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure stronghold",
+  "st": "ok",
+  "key": "c099"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure monument",
+  "st": "ok",
+  "key": "c100"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure fortress",
+  "st": "ok",
+  "key": "c101"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure ancientcity",
+  "st": "ver",
+  "key": "c102"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure pillageroutpost",
+  "st": "ok",
+  "key": "c103"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate structure buriedtreasure",
+  "st": "ok",
+  "key": "c104"
+ },
+ {
+  "cat": "locate",
+  "cmd": "/locate biome cherry_grove",
+  "st": "ver",
+  "key": "c105"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule keepinventory true",
+  "st": "ok",
+  "key": "c106"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule dodaylightcycle false",
+  "st": "ok",
+  "key": "c107"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule doweathercycle false",
+  "st": "ok",
+  "key": "c108"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule mobgriefing false",
+  "st": "ok",
+  "key": "c109"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule domobspawning false",
+  "st": "ok",
+  "key": "c110"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule pvp false",
+  "st": "ok",
+  "key": "c111"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule showcoordinates true",
+  "st": "ok",
+  "key": "c112"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule doimmediaterespawn true",
+  "st": "ok",
+  "key": "c113"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/gamerule commandblockoutput false",
+  "st": "ok",
+  "key": "c114"
+ },
+ {
+  "cat": "rules",
+  "cmd": "/difficulty peaceful",
+  "st": "ok",
+  "key": "c115"
+ },
+ {
+  "cat": "kill",
+  "cmd": "/kill @s",
+  "st": "ok",
+  "key": "c116"
+ },
+ {
+  "cat": "kill",
+  "cmd": "/kill @e[type=!player]",
+  "st": "ok",
+  "key": "c117"
+ },
+ {
+  "cat": "kill",
+  "cmd": "/kill @e[type=zombie]",
+  "st": "ok",
+  "key": "c118"
+ },
+ {
+  "cat": "kill",
+  "cmd": "/kill @e[type=item]",
+  "st": "ok",
+  "key": "c119"
+ },
+ {
+  "cat": "kill",
+  "cmd": "/kill @e[type=!player,r=20]",
+  "st": "ok",
+  "key": "c120"
+ },
+ {
+  "cat": "inventory",
+  "cmd": "/clear @s",
+  "st": "ok",
+  "key": "c121"
+ },
+ {
+  "cat": "inventory",
+  "cmd": "/clear @a",
+  "st": "ok",
+  "key": "c122"
+ },
+ {
+  "cat": "inventory",
+  "cmd": "/clear @s diamond",
+  "st": "ok",
+  "key": "c123"
+ },
+ {
+  "cat": "inventory",
+  "cmd": "/replaceitem entity @s slot.armor.head 0 diamond_helmet",
+  "st": "ver",
+  "key": "c124"
+ },
+ {
+  "cat": "xp",
+  "cmd": "/xp 100 @s",
+  "st": "ok",
+  "key": "c125"
+ },
+ {
+  "cat": "xp",
+  "cmd": "/xp 10L @s",
+  "st": "ok",
+  "key": "c126"
+ },
+ {
+  "cat": "xp",
+  "cmd": "/xp -10L @s",
+  "st": "ok",
+  "key": "c127"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/give @s command_block",
+  "st": "ok",
+  "key": "c128"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/give @s repeating_command_block",
+  "st": "ok",
+  "key": "c129"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/give @s chain_command_block",
+  "st": "ok",
+  "key": "c130"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/say Hello everyone!",
+  "st": "ok",
+  "key": "c131"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/me is building a house",
+  "st": "ok",
+  "key": "c132"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/title @a title Welcome!",
+  "st": "ok",
+  "key": "c133"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/tellraw @a {\"rawtext\":[{\"text\":\"Hello!\"}]}",
+  "st": "ok",
+  "key": "c134"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/execute as @a at @s run say I am here",
+  "st": "ver",
+  "key": "c135"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/execute if entity @e[type=creeper,r=10] run say Danger!",
+  "st": "ver",
+  "key": "c136"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/tag @s add admin",
+  "st": "ok",
+  "key": "c137"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/data merge entity @s {}",
+  "st": "no",
+  "key": "c138"
+ },
+ {
+  "cat": "cmdblocks",
+  "cmd": "/execute @a ~ ~ ~ say Hi",
+  "st": "no",
+  "key": "c139"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/structure save house ~ ~ ~ ~10 ~10 ~10",
+  "st": "ok",
+  "key": "c140"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/structure load house ~ ~ ~",
+  "st": "ok",
+  "key": "c141"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/structure load house ~ ~ ~ 90_degrees",
+  "st": "ok",
+  "key": "c142"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/structure delete house",
+  "st": "ok",
+  "key": "c143"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/give @s structure_block",
+  "st": "ok",
+  "key": "c144"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/tickingarea add circle ~ ~ ~ 4 base",
+  "st": "ok",
+  "key": "c145"
+ },
+ {
+  "cat": "structures",
+  "cmd": "/tickingarea list",
+  "st": "ok",
+  "key": "c146"
+ }
+]
