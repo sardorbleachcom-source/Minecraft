@@ -1134,7 +1134,7 @@ function ai() {
         </button>
 
         <div
-            id="aiAnswer"
+           id="aiAnswer"
             class="result"
             style="display:none"
         ></div>
@@ -1145,7 +1145,8 @@ function ai() {
 }
 
 
-function askAI() {
+
+async function askAI() {
 
     const question =
         document
@@ -1154,11 +1155,7 @@ function askAI() {
             .trim();
 
     if (!question) {
-
-        tg.showAlert(
-            "Savolingizni yozing."
-        );
-
+        tg.showAlert("Savolingizni yozing.");
         return;
     }
 
@@ -1168,299 +1165,65 @@ function askAI() {
     answer.style.display = "block";
 
     answer.innerHTML = `
-
         <div class="result-title">
             🤖 AI
         </div>
 
         <div class="result-desc">
-            AI serveri hali ulanmagan.
-            Keyingi bosqichda bu oynani haqiqiy AI
-            bilan bog‘laymiz.
+            ⏳ Javob tayyorlanmoqda...
         </div>
-
     `;
 
-}
+    try {
 
+        const response = await fetch(
+            "https://medline-cheapest-robots-bios.trycloudflare.com/api/ai",
+            {
+                method: "POST",
 
-/* =========================
-   RETSEPTLAR
-========================= */
+                headers: {
+                    "Content-Type": "application/json"
+                },
 
-function recipes() {
-
-    openModal(
-
-        "🛠️ Retseptlar",
-
-        `
-        <input
-            class="search"
-            id="recipeSearch"
-            placeholder="Buyum qidiring..."
-            oninput="searchRecipes()"
-        >
-
-        <div id="recipesList"></div>
-        `
-
-    );
-
-    searchRecipes();
-
-}
-
-
-const recipeData = [
-
-    {
-        name: "Crafting Table",
-        material: "4 ta yog‘och taxta",
-        icon: "🪵"
-    },
-
-    {
-        name: "Chest",
-        material: "8 ta yog‘och taxta",
-        icon: "📦"
-    },
-
-    {
-        name: "Furnace",
-        material: "8 ta cobblestone",
-        icon: "🔥"
-    },
-
-    {
-        name: "Wooden Pickaxe",
-        material: "3 ta taxta + 2 ta tayoq",
-        icon: "⛏️"
-    },
-
-    {
-        name: "Torch",
-        material: "1 ta coal + 1 ta tayoq",
-        icon: "🔥"
-    }
-
-];
-
-
-function searchRecipes() {
-
-    const q =
-        (
-            document
-                .getElementById("recipeSearch")
-                ?.value || ""
-        ).toLowerCase();
-
-    const list =
-        recipeData.filter(item =>
-            item.name.toLowerCase().includes(q)
+                body: JSON.stringify({
+                    question: question
+                })
+            }
         );
 
-    document.getElementById("recipesList").innerHTML =
-
-        list.map(item => `
-
-            <div class="result">
-
-                <div class="result-title">
-                    ${item.icon} ${item.name}
-                </div>
-
-                <div class="result-desc">
-                    ${item.material}
-                </div>
-
-            </div>
-
-        `).join("");
-
-}
-
-
-/* =========================
-   VOSITALAR
-========================= */
-
-function tools() {
-
-    openModal(
-
-        "🔧 Foydali vositalar",
-
-        `
-
-        <div class="result">
-
-            <div class="result-title">
-                📍 Koordinata
-            </div>
-
-            <div class="result-desc">
-                Koordinatalar bilan ishlash vositasi.
-            </div>
-
-        </div>
-
-
-        <div class="result">
-
-            <div class="result-title">
-                🧪 Potion yordamchisi
-            </div>
-
-            <div class="result-desc">
-                Kerakli potion retseptini topish.
-            </div>
-
-        </div>
-
-
-        <div class="result">
-
-            <div class="result-title">
-                ✨ Enchantment
-            </div>
-
-            <div class="result-desc">
-                Qurol va zirh uchun enchantmentlar.
-            </div>
-
-        </div>
-
-
-        <div class="result">
-
-            <div class="result-title">
-                🗺️ Koordinata konvertori
-            </div>
-
-            <div class="result-desc">
-                Overworld ↔ Nether koordinatalari.
-            </div>
-
-        </div>
-
-        `
-
-    );
-
-}
-
-
-/* =========================
-   PROFIL
-========================= */
-
-function profile() {
-
-    const user =
-        tg.initDataUnsafe?.user;
-
-    const name =
-        user
-            ? (
-                user.first_name +
-                (user.last_name
-                    ? " " + user.last_name
-                    : "")
-            )
-            : "Telegram foydalanuvchisi";
-
-    openModal(
-
-        "👤 Profil",
-
-        `
-
-        <div
-            class="result"
-            style="text-align:center"
-        >
-
-            <div style="font-size:55px">
-                👤
-            </div>
-
-            <div class="result-title">
-                ${name}
-            </div>
-
-            <div class="result-desc">
-                Telegram ID:
-                ${user ? user.id : "—"}
-            </div>
-
-        </div>
-
-        `
-
-    );
-
-}
-
-
-/* =========================
-   SOZLAMALAR
-========================= */
-
-function settings() {
-
-    openModal(
-
-        "⚙️ Sozlamalar",
-
-        `
-
-        <div class="result">
-
-            <div class="result-title">
-                🌐 Til
-            </div>
-
-            <div class="result-desc">
-                O‘zbekcha
-            </div>
-
-        </div>
-
-
-        <div class="result">
-
-            <div class="result-title">
-                🎨 Dizayn
-            </div>
-
-            <div class="result-desc">
-                Minecraft
-            </div>
-
-        </div>
-
-
-        <div class="result">
-
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(
+                data.error || "Server xatosi"
+            );
+        }
+
+        answer.innerHTML = `
             <div class="result-title">
                 🤖 AI
             </div>
 
-            <div class="result-desc">
-                AI yordamchi
+            <div class="result-desc" style="white-space:pre-wrap;">
+                ${escapeHtml(data.answer)}
+            </div>
+        `;
+
+    } catch (error) {
+
+        answer.innerHTML = `
+            <div class="result-title">
+                ❌ Xatolik
             </div>
 
-        </div>
-
-        `
-
-    );
-
+            <div class="result-desc">
+                ${escapeHtml(error.message)}
+            </div>
+        `;
+    }
 }
-
-</script>
-
-</body>
-</html>
+function escapeHtml(text) {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
