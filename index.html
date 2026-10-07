@@ -956,7 +956,12 @@ body {
 
 <script>
 
-const tg = window.Telegram.WebApp;
+const tg = window.Telegram?.WebApp || {
+    ready: () => {},
+    expand: () => {},
+    showAlert: (message) => alert(message),
+    HapticFeedback: null
+};
 
 tg.ready();
 tg.expand();
