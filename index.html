@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft AI</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: var(--tg-theme-bg-color, #111827);
+            color: var(--tg-theme-text-color, #ffffff);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        .logo {
+            font-size: 55px;
+        }
+
+        h1 {
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            opacity: .7;
+        }
+
+        .card {
+            background: var(--tg-theme-secondary-bg-color, #1f2937);
+            padding: 18px;
+            border-radius: 18px;
+            margin-top: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border: 0;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <div class="logo">🎮🤖</div>
+        <h1>Minecraft AI</h1>
+        <div class="subtitle">
+            Minecraft uchun AI yordamchi
+        </div>
+    </div>
+
+    <div class="card">
+        <button onclick="commands()">
+            🧩 Buyruqlar
+        </button>
+
+        <button onclick="ai()">
+            🤖 AI yordamchi
+        </button>
+
+        <button onclick="recipes()">
+            🛠 Retseptlar
+        </button>
+
+        <button onclick="tools()">
+            🔧 Foydali vositalar
+        </button>
+    </div>
+
+</div>
+
+<script>
+    const tg = window.Telegram.WebApp;
+
+    tg.ready();
+    tg.expand();
+
+    function commands() {
+        tg.showAlert("Buyruqlar bo‘limi tez orada ishga tushadi.");
+    }
+
+    function ai() {
+        tg.showAlert("Minecraft AI yordamchisi.");
+    }
+
+    function recipes() {
+        tg.showAlert("Crafting retseptlari.");
+    }
+
+    function tools() {
+        tg.showAlert("Foydali Minecraft vositalari.");
+    }
+</script>
+
+</body>
+</html>
