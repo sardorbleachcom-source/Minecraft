@@ -1,3 +1,4 @@
+let commandPage = 0;
 const allCommands = [
 {name:"/give",desc:"O‘yinchiga buyum beradi.",code:"/give @s diamond 64"},
 {name:"/tp",desc:"O‘yinchini teleport qiladi.",code:"/tp @s 100 70 100"},
@@ -41,7 +42,95 @@ const allCommands = [
 {name:"/kick",desc:"O‘yinchini serverdan chiqaradi.",code:"/kick Player"},
 {name:"/ban",desc:"O‘yinchini serverdan bloklaydi.",code:"/ban Player"}
 ];
+const COMMANDS_PER_PAGE = 30;
 
+function commands(){
+    commandPage = 0;
+    openModal("🧩 Buyruqlar",`
+        <input class="search" id="allCommandSearch"
+        placeholder="Buyruq qidiring..." oninput="searchAllCommands()">
+        <div id="allCommandsList"></div>
+        <div id="commandPagination"></div>
+    `);
+    searchAllCommands();
+}
+
+function searchAllCommands(){
+    const q=(document.getElementById("allCommandSearch")?.value||"").toLowerCase();
+
+    const list=allCommands.filter(x=>
+        x.name.toLowerCase().includes(q) ||
+        x.desc.toLowerCase().includes(q) ||
+        x.code.toLowerCase().includes(q)
+    );
+
+    const totalPages=Math.max(1,Math.ceil(list.length/COMMANDS_PER_PAGE));
+
+    if(commandPage>=totalPages) commandPage=totalPages-1;
+
+    const start=commandPage*COMMANDS_PER_PAGE;
+    const page=list.slice(start,start+COMMANDS_PER_PAGE);
+
+    document.getElementById("allCommandsList").innerHTML=page.map(x=>`
+        <div class="result">
+            <div class="result-title">${x.name}</div>
+            <div class="result-desc">${x.desc}</div>
+            <div class="code">${x.code}</div>
+            <button class="primary"
+            onclick='copyCommand(${JSON.stringify(x.code)})'>
+            📋 Nusxalash
+            </button>
+        </div>
+    `).join("");
+
+    document.getElementById("commandPagination").innerHTML=`
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:15px">
+            <button class="primary"
+            onclick="prevCommandPage()"
+            ${commandPage===0?"disabled":""}>
+            ◀️ Oldingi
+            </button>
+
+            <span style="padding:10px">
+            ${commandPage+1} / ${totalPages}
+            </span>
+
+            <button class="primary"
+            onclick="nextCommandPage()"
+            ${commandPage>=totalPages-1?"disabled":""}>
+            Keyingi ▶️
+            </button>
+        </div>
+        <div style="text-align:center;margin-top:8px">
+            ${list.length} ta buyruq
+        </div>
+    `;
+}
+
+function nextCommandPage(){
+    commandPage++;
+    searchAllCommands();
+}
+
+function prevCommandPage(){
+    if(commandPage>0){
+        commandPage--;
+        searchAllCommands();
+    }
+}
+
+async function copyCommand(code){
+    try{
+        await navigator.clipboard.writeText(code);
+        if(window.tg && tg.showAlert){
+            tg.showAlert("Buyruq nusxalandi ✅");
+        }
+    }catch(e){
+        if(window.tg && tg.showAlert){
+            tg.showAlert("Nusxalash amalga oshmadi");
+        }
+    }
+}
 function commands(){
     openModal("🧩 Buyruqlar",`
         <input class="search" id="allCommandSearch"
