@@ -131,29 +131,6 @@ async function copyCommand(code){
         }
     }
 }
-function commands(){
-    openModal("🧩 Buyruqlar",`
-        <input class="search" id="allCommandSearch"
-        placeholder="Buyruq qidiring..." oninput="searchAllCommands()">
-        <div id="allCommandsList"></div>
-    `);
-    searchAllCommands();
-}
-
-function searchAllCommands(){
-    const q=(document.getElementById("allCommandSearch")?.value||"").toLowerCase();
-    const list=allCommands.filter(x=>
-        x.name.toLowerCase().includes(q) ||
-        x.desc.toLowerCase().includes(q)
-    );
-    document.getElementById("allCommandsList").innerHTML=list.map(x=>`
-        <div class="result">
-            <div class="result-title">${x.name}</div>
-            <div class="result-desc">${x.desc}</div>
-            <div class="code">${x.code}</div>
-        </div>
-    `).join("");
-}
 
 function recipes(){
     openModal("🛠️ Retseptlar",`
